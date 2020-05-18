@@ -20,10 +20,10 @@ cc.Class({
         window.UiMgr = this;
     },
 
-    open: function open(name) {
+    open: function open(name, args) {
         var _this = this;
 
-        var args = Array.prototype.slice.call(arguments).slice(1);
+        // let args = Array.prototype.slice.call(arguments).slice(1)
         if (this.model.prefabs[name]) {
             this.model.prefabs[name].active = true;
             this.model.prefabs[name].getComponent(name).onenter && this.model.prefabs[name].getComponent(name).onenter(args);

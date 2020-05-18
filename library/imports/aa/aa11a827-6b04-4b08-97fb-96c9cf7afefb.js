@@ -11,7 +11,7 @@ cc.Class({
 
     btnStartGame: function btnStartGame() {
         var allData = GetLocalStorage('TuiXiangZi-info') || [];
-        UiMgr.open('Game');
+        UiMgr.open('Game', allData[0]);
     },
 
     btnCheckMap: function btnCheckMap() {

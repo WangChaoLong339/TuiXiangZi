@@ -14,8 +14,8 @@ cc.Class({
         window.UiMgr = this
     },
 
-    open: function (name) {
-        let args = Array.prototype.slice.call(arguments).slice(1)
+    open: function (name, args) {
+        // let args = Array.prototype.slice.call(arguments).slice(1)
         if (this.model.prefabs[name]) {
             this.model.prefabs[name].active = true
             this.model.prefabs[name].getComponent(name).onenter && this.model.prefabs[name].getComponent(name).onenter(args)

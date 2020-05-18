@@ -1,491 +1,57 @@
-2020-05-15T02:41:12.209Z - normal: Load ~/.CocosCreator/settings.json
-2020-05-15T02:41:12.212Z - normal: checking language setting...
-2020-05-15T02:41:12.212Z - normal: Language: zh
-2020-05-15T02:41:13.020Z - success: protocol editor-framework registered
-2020-05-15T02:41:13.021Z - success: protocol app registered
-2020-05-15T02:41:13.021Z - success: protocol theme registered
-2020-05-15T02:41:13.021Z - success: protocol packages registered
-2020-05-15T02:41:13.022Z - success: protocol unpack registerred
-2020-05-15T02:41:13.022Z - success: protocol disable-commonjs registerred
-2020-05-15T02:41:13.219Z - normal: connected!
-2020-05-15T02:41:13.220Z - normal: Check project /Users/wy/private/project/TuiXiangZi
-2020-05-15T02:41:13.222Z - normal: Initializing Cocos2d
-2020-05-15T02:41:13.444Z - warn: 会话不存在或已过期
-2020-05-15T02:41:13.454Z - normal: Initializing Asset Database
-2020-05-15T02:41:13.489Z - success: protocol uuid registerred
-2020-05-15T02:41:13.489Z - success: protocol db registerred
-2020-05-15T02:41:13.489Z - success: protocol thumbnail registerred
-2020-05-15T02:41:13.489Z - normal: Loading editor/builtin packages
-2020-05-15T02:41:13.520Z - success: anysdk loaded
-2020-05-15T02:41:13.634Z - success: assets loaded
-2020-05-15T02:41:13.638Z - success: builder loaded
-2020-05-15T02:41:13.641Z - success: cocos-analytics loaded
-2020-05-15T02:41:13.649Z - success: console loaded
-2020-05-15T02:41:13.680Z - success: fb-instant-games loaded
-2020-05-15T02:41:13.686Z - success: hierarchy loaded
-2020-05-15T02:41:13.690Z - success: inspector loaded
-2020-05-15T02:41:13.692Z - success: keystore loaded
-2020-05-15T02:41:13.698Z - success: node-library loaded
-2020-05-15T02:41:13.701Z - success: package-asset loaded
-2020-05-15T02:41:13.703Z - success: preferences loaded
-2020-05-15T02:41:13.706Z - success: project-exporter loaded
-2020-05-15T02:41:13.723Z - success: project-importer loaded
-2020-05-15T02:41:13.725Z - success: project-settings loaded
-2020-05-15T02:41:13.732Z - success: ui-kit loaded
-2020-05-15T02:41:13.738Z - success: ui-grid loaded
-2020-05-15T02:41:13.742Z - success: scene loaded
-2020-05-15T02:41:13.743Z - success: sprite-editor loaded
-2020-05-15T02:41:13.749Z - success: store loaded
-2020-05-15T02:41:13.755Z - success: timeline loaded
-2020-05-15T02:41:13.756Z - normal: Loading builtin packages
-2020-05-15T02:41:13.760Z - success: asset-db-debugger loaded
-2020-05-15T02:41:13.761Z - success: color-picker loaded
-2020-05-15T02:41:13.766Z - success: package-manager loaded
-2020-05-15T02:41:13.768Z - success: qqplay-adapter loaded
-2020-05-15T02:41:13.774Z - success: sdkbox loaded
-2020-05-15T02:41:13.781Z - success: tester loaded
-2020-05-15T02:41:13.785Z - success: ui-kit-preview-extra loaded
-2020-05-15T02:41:13.789Z - success: ui-kit-preview loaded
-2020-05-15T02:41:13.792Z - success: ui-tree loaded
-2020-05-15T02:41:13.794Z - success: weapp-adapter loaded
-2020-05-15T02:41:14.811Z - normal: Initializing project /Users/wy/private/project/TuiXiangZi
-2020-05-15T02:41:14.815Z - normal: Loading packages
-2020-05-15T02:41:14.820Z - normal: Watching packages
-2020-05-15T02:41:14.923Z - normal: Run Application
-2020-05-15T02:41:15.895Z - success: preview server running at http://localhost:7456
-2020-05-15T02:41:20.280Z - normal: 1.9.3
-2020-05-15T06:16:30.307Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:235094
-2020-05-15T06:16:30.309Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:235096
-2020-05-15T06:24:54.804Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:243902
-2020-05-15T06:26:27.379Z - error: Can't add component 'cc.Sprite' because del already contains the same component.
-    at Object.errorID (/Applications/CocosCreatorV193.app/Contents/Resources/engine/CCDebugger.js:343:18)
-    at cc_Node.cc.Class._checkMultipleComp (/Applications/CocosCreatorV193.app/Contents/Resources/engine/cocos2d/core/utils/base-node.js:823:20)
-    at cc_Node.cc.Class._addComponentAt (/Applications/CocosCreatorV193.app/Contents/Resources/engine/cocos2d/core/utils/base-node.js:942:23)
-    at RemoveComponentCommand.undo (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/page/scene-utils/scene-undo.js:1:4960)
-    at CommandGroup.undo (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/share/undo.js:1:796)
-    at UndoList.undo (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/share/undo.js:1:1518)
-    at Object.undo (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/page/scene-utils/scene-undo.js:1:10068)
-    at HTMLElement.scene:undo (file:///Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/builtin/scene/panel/scene.js:1:11256)
-    at Object.Panel._dispatch (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/renderer/panel.js:1:2283)
-2020-05-15T07:33:26.718Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:317629
-2020-05-15T07:33:53.406Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:317868
-2020-05-15T07:33:53.407Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:317870
-2020-05-15T10:21:51.356Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/local.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at _setCurrentScene (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/builtin/scene/main.js:1:1099)
-    at Object.set-current-scene (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/builtin/scene/main.js:1:3316)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:194:7)
-    at _main2mainOpts (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/ipc.js:1:1524)
-    at Object.Ipc.sendToMain (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/ipc.js:1:4226)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:52.812Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at BrowserWindow.Window.nativeWin.on.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:2119)
-    at emitOne (events.js:101:20)
-    at BrowserWindow.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:52.820Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:52.822Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:52.915Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:52.917Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:56.003Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:10090)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:194:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:56.243Z - normal: 1.9.3
-2020-05-15T10:21:56.863Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at BrowserWindow.Window.nativeWin.on.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:2119)
-    at emitOne (events.js:101:20)
-    at BrowserWindow.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:56.866Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:56.867Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:56.883Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:56.884Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:21:59.832Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:10090)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:194:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:00.011Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at Window.forceClose (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:3567)
-    at EditorM.Window.windows.forEach.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/index.js:1:3169)
-    at Array.forEach (native)
-    at App.app.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/index.js:1:3155)
-    at emitOne (events.js:96:13)
-    at App.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:00.012Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at BrowserWindow.Window.nativeWin.on.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:2119)
-    at emitOne (events.js:101:20)
-    at BrowserWindow.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:00.127Z - normal: 1.9.3
-2020-05-15T10:22:00.217Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:00.219Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:00.297Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:00.299Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:03.221Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:10090)
-    at emitTwo (events.js:106:13)
-    at EventEmitter.emit (events.js:194:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:03.269Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at Window.forceClose (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:3567)
-    at EditorM.Window.windows.forEach.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/index.js:1:3169)
-    at Array.forEach (native)
-    at App.app.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/index.js:1:3155)
-    at emitOne (events.js:96:13)
-    at App.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:03.271Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at BrowserWindow.Window.nativeWin.on.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:2119)
-    at emitOne (events.js:101:20)
-    at BrowserWindow.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:03.462Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:03.463Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:03.531Z - normal: 1.9.3
-2020-05-15T10:22:03.630Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/hierarchy.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:03.632Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/assets.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at EventEmitter.ipcMain.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:237:10)
-    at emitThree (events.js:116:13)
-    at EventEmitter.emit (events.js:197:7)
-    at WebContents.<anonymous> (/Applications/CocosCreatorV193.app/Contents/Resources/electron.asar/browser/api/web-contents.js:247:13)
-    at emitTwo (events.js:106:13)
-    at WebContents.emit (events.js:194:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:05.465Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at Window.forceClose (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:3567)
-    at EditorM.Window.windows.forEach.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/index.js:1:3169)
-    at Array.forEach (native)
-    at App.app.on (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/index.js:1:3155)
-    at emitOne (events.js:96:13)
-    at App.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
-2020-05-15T10:22:05.467Z - error: Error: ENOENT: no such file or directory, open '/Users/wy/private/project/TuiXiangZi/local/layout.windows.json'
-    at Object.fs.openSync (fs.js:584:18)
-    at Object.module.(anonymous function) [as openSync] (ELECTRON_ASAR.js:191:20)
-    at Object.fs.writeFileSync (fs.js:1326:33)
-    at _Profile.save (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/node_modules/electron-profile/lib/main.js:195:8)
-    at Function._saveWindowStates (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:8198)
-    at BrowserWindow.Window.nativeWin.on.e (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor-framework/lib/main/window.js:1:2119)
-    at emitOne (events.js:101:20)
-    at BrowserWindow.emit (events.js:191:7)
-    at process.on.t (/Applications/CocosCreatorV193.app/Contents/Resources/app.asar/editor/core/editor-init.js:1:1068)
-    at emitOne (events.js:101:20)
-    at process.emit (events.js:191:7)
-    at process._fatalException (bootstrap_node.js:308:26)
+2020-05-18T00:34:04.584Z - normal: Load ~/.CocosCreator/settings.json
+2020-05-18T00:34:04.587Z - normal: checking language setting...
+2020-05-18T00:34:04.587Z - normal: Language: zh
+2020-05-18T00:34:05.322Z - success: protocol editor-framework registered
+2020-05-18T00:34:05.323Z - success: protocol app registered
+2020-05-18T00:34:05.323Z - success: protocol theme registered
+2020-05-18T00:34:05.323Z - success: protocol packages registered
+2020-05-18T00:34:05.323Z - success: protocol unpack registerred
+2020-05-18T00:34:05.323Z - success: protocol disable-commonjs registerred
+2020-05-18T00:34:05.500Z - normal: connected!
+2020-05-18T00:34:05.501Z - normal: Check project /Users/wy/private/project/TuiXiangZi
+2020-05-18T00:34:05.503Z - normal: Initializing Cocos2d
+2020-05-18T00:34:05.694Z - normal: Initializing Asset Database
+2020-05-18T00:34:05.721Z - success: protocol uuid registerred
+2020-05-18T00:34:05.721Z - success: protocol db registerred
+2020-05-18T00:34:05.721Z - success: protocol thumbnail registerred
+2020-05-18T00:34:05.721Z - normal: Loading editor/builtin packages
+2020-05-18T00:34:05.741Z - success: anysdk loaded
+2020-05-18T00:34:05.847Z - success: assets loaded
+2020-05-18T00:34:05.850Z - success: builder loaded
+2020-05-18T00:34:05.852Z - success: cocos-analytics loaded
+2020-05-18T00:34:05.855Z - success: console loaded
+2020-05-18T00:34:05.882Z - success: fb-instant-games loaded
+2020-05-18T00:34:05.886Z - success: hierarchy loaded
+2020-05-18T00:34:05.890Z - success: inspector loaded
+2020-05-18T00:34:05.891Z - success: keystore loaded
+2020-05-18T00:34:05.897Z - success: node-library loaded
+2020-05-18T00:34:05.899Z - success: package-asset loaded
+2020-05-18T00:34:05.900Z - success: preferences loaded
+2020-05-18T00:34:05.903Z - success: project-exporter loaded
+2020-05-18T00:34:05.916Z - success: project-importer loaded
+2020-05-18T00:34:05.919Z - success: project-settings loaded
+2020-05-18T00:34:05.923Z - success: ui-kit loaded
+2020-05-18T00:34:05.930Z - success: ui-grid loaded
+2020-05-18T00:34:05.934Z - success: scene loaded
+2020-05-18T00:34:05.935Z - success: sprite-editor loaded
+2020-05-18T00:34:05.939Z - success: store loaded
+2020-05-18T00:34:05.947Z - success: timeline loaded
+2020-05-18T00:34:05.948Z - normal: Loading builtin packages
+2020-05-18T00:34:05.954Z - success: asset-db-debugger loaded
+2020-05-18T00:34:05.955Z - success: color-picker loaded
+2020-05-18T00:34:05.959Z - success: package-manager loaded
+2020-05-18T00:34:05.960Z - success: qqplay-adapter loaded
+2020-05-18T00:34:05.965Z - success: sdkbox loaded
+2020-05-18T00:34:05.969Z - success: tester loaded
+2020-05-18T00:34:05.972Z - success: ui-kit-preview-extra loaded
+2020-05-18T00:34:05.976Z - success: ui-kit-preview loaded
+2020-05-18T00:34:05.978Z - success: ui-tree loaded
+2020-05-18T00:34:05.979Z - success: weapp-adapter loaded
+2020-05-18T00:34:06.874Z - normal: Initializing project /Users/wy/private/project/TuiXiangZi
+2020-05-18T00:34:06.875Z - normal: Loading packages
+2020-05-18T00:34:06.879Z - normal: Watching packages
+2020-05-18T00:34:06.965Z - normal: Run Application
+2020-05-18T00:34:07.404Z - success: preview server running at http://localhost:7456
+2020-05-18T00:34:11.673Z - normal: 1.9.3
+2020-05-18T01:51:50.284Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:53625
+2020-05-18T02:11:21.156Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:72392
