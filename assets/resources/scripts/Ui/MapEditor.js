@@ -3,29 +3,70 @@ cc.Class({
 
     properties: {
         top: cc.Node,
-        selectTypeRoot: cc.Node,
+
+        mapRoot: cc.Node,
+        mapItem: cc.Node,
+
+        typeRoot: cc.Node,
+        twinkle: cc.Node,
+        typeItem: cc.Node,
+
         bottom: cc.Node,
-        map: cc.Node,
     },
 
     onLoad: function () {
         this.model = {
-            select: 0, // 0:黑 1:墙 2:箱 3:终 4:合 5:人
+            types: [
+                0, // 空地
+                1, // 墙壁
+                2, // 箱子
+                3, // 目标
+                4, // 箱子 + 目标
+                5, // 人物
+                6, // 人物 + 目标
+            ],
+            typeIdx: 0,
             lineCount: 0,
             columnCount: 0,
             mapData: [],
             maxMapWidth: ViewSize.width,
             maxMapHeight: ViewSize.height,
         }
-        this.item = this.map.PathChild('item')
-        this.map.removeAllChildren()
-        this.selected = this.selectTypeRoot.PathChild('selected')
+
+        this.model.typeItemSize = parseInt(this.mapRoot.width / this.model.types.length)
+        this.model.typeItemSize = this.model.typeItemSize > 100 ? 100 : this.model.typeItemSize
+        this.twinkle.width = this.twinkle.height = this.model.typeItemSize
+
+        this.createTypeItem()
+    },
+
+    createTypeItem: function () {
+        this.typeRoot.removeAllChildren()
+        for (let i = 0; i < this.model.types.length; i++) {
+            let cloneItem = cc.instantiate(this.typeItem)
+            SetSpriteFrame(`${this.getPathByType(this.model.types[i])}`, cloneItem.PathChild('val', cc.Sprite))
+            cloneItem.width = this.model.typeItemSize
+            cloneItem.height = this.model.typeItemSize
+            cloneItem.x = -parseInt(this.model.types.length / 2) * cloneItem.width + i * cloneItem.width
+            cloneItem.parent = this.typeRoot
+        }
     },
 
     onenter: function () {
-        this.selected.x = this.selectTypeRoot.children[1].x
-        this.selected.stopAllActions()
-        this.selected.runAction(cc.repeatForever(cc.sequence(
+        this.clear()
+        this.twinkle.x = this.typeRoot.children[0].x
+        this.playTwinkleAction()
+    },
+
+    createMapItem: function () {
+        this.mapRoot.removeAllChildren()
+        for (let i = 0; i < this.model.types; i++) {
+        }
+    },
+
+    playTwinkleAction: function () {
+        this.twinkle.stopAllActions()
+        this.twinkle.runAction(cc.repeatForever(cc.sequence(
             cc.fadeOut(0.5),
             cc.fadeIn(0.5),
             cc.delayTime(0.2),
@@ -33,20 +74,20 @@ cc.Class({
     },
 
     clear: function () {
-        this.model = {
-            select: 0,
-            lineCount: 0,
-            columnCount: 0,
-            mapData: [],
-        }
-        this.map.children.removeAllChildren()
+        // 数据层
+        this.model.typeIdx = 0
+        this.model.lineCount = 0
+        this.model.columnCount = 0
+        this.model.mapData = []
+
+        // 界面层
+        this.mapRoot.removeAllChildren()
         this.bottom.PathChild('lineEditBox', cc.EditBox).string = ''
         this.bottom.PathChild('columnEditBox', cc.EditBox).string = ''
-        this.updateMap()
     },
 
     updateMap: function () {
-        this.map.children.forEach((it, idx) => {
+        this.mapRoot.children.forEach((it, idx) => {
             SetSpriteFrame(this.getPathByType(this.model.mapData[idx]), it.PathChild('fg', cc.Sprite))
         })
     },
@@ -65,6 +106,8 @@ cc.Class({
                 return 'picture/box/box_01'
             case 5:
                 return 'picture/hero/down_00'
+            case 6:
+                return 'picture/dot/dot_3'
             default:
                 cc.error('!--无法匹配的类型--!')
         }
@@ -110,13 +153,13 @@ cc.Class({
     },
 
     btnItemType: function (event, data) {
-        this.selected.x = this.selectTypeRoot.children[parseInt(data) + 1].x
-        this.model.select = parseInt(data)
+        this.twinkle.x = this.typeRoot.children[parseInt(data) + 1].x
+        this.model.typeIdx = parseInt(data)
     },
 
     btnMapItem: function (event) {
         let idx = event.target.idx
-        this.model.mapData[idx] = this.model.select
+        this.model.mapData[idx] = this.model.typeIdx
         this.updateMap()
     },
 
@@ -135,23 +178,23 @@ cc.Class({
         // 横图 || 方形图
         if (this.model.lineCount >= this.model.columnCount) {
             itemSize = parseInt(this.model.maxMapWidth / this.model.lineCount)
-            this.map.width = this.model.maxMapWidth
+            this.mapRoot.width = this.model.maxMapWidth
         }
         // 竖图
         if (this.model.lineCount < this.model.columnCount) {
             itemSize = parseInt(this.model.maxMapWidth / this.model.columnCount)
-            this.map.width = this.model.lineCount * itemSize
+            this.mapRoot.width = this.model.lineCount * itemSize
         }
 
-        this.map.removeAllChildren()
+        this.mapRoot.removeAllChildren()
         this.model.mapData = []
-        for (var i = 0; i < this.model.lineCount * this.model.columnCount; i++) {
+        for (let i = 0; i < this.model.lineCount * this.model.columnCount; i++) {
             this.model.mapData.push(0)
-            let item = cc.instantiate(this.item)
+            let item = cc.instantiate(this.mapItem)
             item.idx = i
             item.width = itemSize
             item.height = itemSize
-            item.parent = this.map
+            item.parent = this.mapRoot
         }
         this.updateMap()
     },

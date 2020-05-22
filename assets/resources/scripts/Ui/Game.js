@@ -5,6 +5,7 @@ cc.Class({
         title: cc.Label,
         map: cc.Node,
         item: cc.Node,
+        player: cc.Node,
     },
 
     onLoad: function () {
@@ -22,6 +23,7 @@ cc.Class({
     initData: function (info) {
         this.moving = false
         this.mapInfo = info
+        this.point = 0 // 0:down 1:right 2:up 3:left
 
         this.current = { x: null, y: null }
         for (let i = 0; i < this.mapInfo.map.length; i++) {

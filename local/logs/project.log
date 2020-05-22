@@ -1,57 +1,58 @@
-2020-05-18T00:34:04.584Z - normal: Load ~/.CocosCreator/settings.json
-2020-05-18T00:34:04.587Z - normal: checking language setting...
-2020-05-18T00:34:04.587Z - normal: Language: zh
-2020-05-18T00:34:05.322Z - success: protocol editor-framework registered
-2020-05-18T00:34:05.323Z - success: protocol app registered
-2020-05-18T00:34:05.323Z - success: protocol theme registered
-2020-05-18T00:34:05.323Z - success: protocol packages registered
-2020-05-18T00:34:05.323Z - success: protocol unpack registerred
-2020-05-18T00:34:05.323Z - success: protocol disable-commonjs registerred
-2020-05-18T00:34:05.500Z - normal: connected!
-2020-05-18T00:34:05.501Z - normal: Check project /Users/wy/private/project/TuiXiangZi
-2020-05-18T00:34:05.503Z - normal: Initializing Cocos2d
-2020-05-18T00:34:05.694Z - normal: Initializing Asset Database
-2020-05-18T00:34:05.721Z - success: protocol uuid registerred
-2020-05-18T00:34:05.721Z - success: protocol db registerred
-2020-05-18T00:34:05.721Z - success: protocol thumbnail registerred
-2020-05-18T00:34:05.721Z - normal: Loading editor/builtin packages
-2020-05-18T00:34:05.741Z - success: anysdk loaded
-2020-05-18T00:34:05.847Z - success: assets loaded
-2020-05-18T00:34:05.850Z - success: builder loaded
-2020-05-18T00:34:05.852Z - success: cocos-analytics loaded
-2020-05-18T00:34:05.855Z - success: console loaded
-2020-05-18T00:34:05.882Z - success: fb-instant-games loaded
-2020-05-18T00:34:05.886Z - success: hierarchy loaded
-2020-05-18T00:34:05.890Z - success: inspector loaded
-2020-05-18T00:34:05.891Z - success: keystore loaded
-2020-05-18T00:34:05.897Z - success: node-library loaded
-2020-05-18T00:34:05.899Z - success: package-asset loaded
-2020-05-18T00:34:05.900Z - success: preferences loaded
-2020-05-18T00:34:05.903Z - success: project-exporter loaded
-2020-05-18T00:34:05.916Z - success: project-importer loaded
-2020-05-18T00:34:05.919Z - success: project-settings loaded
-2020-05-18T00:34:05.923Z - success: ui-kit loaded
-2020-05-18T00:34:05.930Z - success: ui-grid loaded
-2020-05-18T00:34:05.934Z - success: scene loaded
-2020-05-18T00:34:05.935Z - success: sprite-editor loaded
-2020-05-18T00:34:05.939Z - success: store loaded
-2020-05-18T00:34:05.947Z - success: timeline loaded
-2020-05-18T00:34:05.948Z - normal: Loading builtin packages
-2020-05-18T00:34:05.954Z - success: asset-db-debugger loaded
-2020-05-18T00:34:05.955Z - success: color-picker loaded
-2020-05-18T00:34:05.959Z - success: package-manager loaded
-2020-05-18T00:34:05.960Z - success: qqplay-adapter loaded
-2020-05-18T00:34:05.965Z - success: sdkbox loaded
-2020-05-18T00:34:05.969Z - success: tester loaded
-2020-05-18T00:34:05.972Z - success: ui-kit-preview-extra loaded
-2020-05-18T00:34:05.976Z - success: ui-kit-preview loaded
-2020-05-18T00:34:05.978Z - success: ui-tree loaded
-2020-05-18T00:34:05.979Z - success: weapp-adapter loaded
-2020-05-18T00:34:06.874Z - normal: Initializing project /Users/wy/private/project/TuiXiangZi
-2020-05-18T00:34:06.875Z - normal: Loading packages
-2020-05-18T00:34:06.879Z - normal: Watching packages
-2020-05-18T00:34:06.965Z - normal: Run Application
-2020-05-18T00:34:07.404Z - success: preview server running at http://localhost:7456
-2020-05-18T00:34:11.673Z - normal: 1.9.3
-2020-05-18T01:51:50.284Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:53625
-2020-05-18T02:11:21.156Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:72392
+2020-05-22T06:01:00.858Z - normal: Load ~/.CocosCreator/settings.json
+2020-05-22T06:01:00.860Z - normal: checking language setting...
+2020-05-22T06:01:00.860Z - normal: Language: zh
+2020-05-22T06:01:01.575Z - success: protocol editor-framework registered
+2020-05-22T06:01:01.575Z - success: protocol app registered
+2020-05-22T06:01:01.576Z - success: protocol theme registered
+2020-05-22T06:01:01.576Z - success: protocol packages registered
+2020-05-22T06:01:01.576Z - success: protocol unpack registerred
+2020-05-22T06:01:01.576Z - success: protocol disable-commonjs registerred
+2020-05-22T06:01:01.801Z - normal: connected!
+2020-05-22T06:01:01.803Z - normal: Check project /Users/wy/private/project/TuiXiangZi
+2020-05-22T06:01:01.805Z - normal: Initializing Cocos2d
+2020-05-22T06:01:02.021Z - normal: Initializing Asset Database
+2020-05-22T06:01:02.057Z - success: protocol uuid registerred
+2020-05-22T06:01:02.057Z - success: protocol db registerred
+2020-05-22T06:01:02.057Z - success: protocol thumbnail registerred
+2020-05-22T06:01:02.067Z - normal: Loading editor/builtin packages
+2020-05-22T06:01:02.086Z - success: anysdk loaded
+2020-05-22T06:01:02.204Z - success: assets loaded
+2020-05-22T06:01:02.207Z - success: builder loaded
+2020-05-22T06:01:02.209Z - success: cocos-analytics loaded
+2020-05-22T06:01:02.213Z - success: console loaded
+2020-05-22T06:01:02.242Z - success: fb-instant-games loaded
+2020-05-22T06:01:02.245Z - success: hierarchy loaded
+2020-05-22T06:01:02.252Z - success: inspector loaded
+2020-05-22T06:01:02.253Z - success: keystore loaded
+2020-05-22T06:01:02.257Z - success: node-library loaded
+2020-05-22T06:01:02.259Z - success: package-asset loaded
+2020-05-22T06:01:02.260Z - success: preferences loaded
+2020-05-22T06:01:02.263Z - success: project-exporter loaded
+2020-05-22T06:01:02.278Z - success: project-importer loaded
+2020-05-22T06:01:02.281Z - success: project-settings loaded
+2020-05-22T06:01:02.286Z - success: ui-kit loaded
+2020-05-22T06:01:02.290Z - success: ui-grid loaded
+2020-05-22T06:01:02.294Z - success: scene loaded
+2020-05-22T06:01:02.296Z - success: sprite-editor loaded
+2020-05-22T06:01:02.303Z - success: store loaded
+2020-05-22T06:01:02.311Z - success: timeline loaded
+2020-05-22T06:01:02.311Z - normal: Loading builtin packages
+2020-05-22T06:01:02.318Z - success: asset-db-debugger loaded
+2020-05-22T06:01:02.319Z - success: color-picker loaded
+2020-05-22T06:01:02.324Z - success: package-manager loaded
+2020-05-22T06:01:02.325Z - success: qqplay-adapter loaded
+2020-05-22T06:01:02.335Z - success: sdkbox loaded
+2020-05-22T06:01:02.340Z - success: tester loaded
+2020-05-22T06:01:02.344Z - success: ui-kit-preview-extra loaded
+2020-05-22T06:01:02.347Z - success: ui-kit-preview loaded
+2020-05-22T06:01:02.352Z - success: ui-tree loaded
+2020-05-22T06:01:02.355Z - success: weapp-adapter loaded
+2020-05-22T06:01:03.228Z - normal: Initializing project /Users/wy/private/project/TuiXiangZi
+2020-05-22T06:01:03.231Z - normal: Loading packages
+2020-05-22T06:01:03.235Z - normal: Watching packages
+2020-05-22T06:01:03.318Z - normal: Run Application
+2020-05-22T06:01:04.471Z - success: preview server running at http://localhost:7456
+2020-05-22T06:01:08.278Z - normal: 1.9.3
+2020-05-22T06:43:28.459Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:47078
+2020-05-22T06:43:28.461Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:47080
+2020-05-22T06:43:28.461Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:47081

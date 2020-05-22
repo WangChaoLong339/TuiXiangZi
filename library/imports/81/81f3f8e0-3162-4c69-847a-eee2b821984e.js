@@ -10,7 +10,8 @@ cc.Class({
     properties: {
         title: cc.Label,
         map: cc.Node,
-        item: cc.Node
+        item: cc.Node,
+        player: cc.Node
     },
 
     onLoad: function onLoad() {
@@ -28,6 +29,7 @@ cc.Class({
     initData: function initData(info) {
         this.moving = false;
         this.mapInfo = info;
+        this.point = 0; // 0:down 1:right 2:up 3:left
 
         this.current = { x: null, y: null };
         for (var i = 0; i < this.mapInfo.map.length; i++) {
@@ -65,6 +67,8 @@ cc.Class({
     },
 
     tryMoveTo: function tryMoveTo(point) {
+        var _this = this;
+
         var arrive = null;
         var distance = parseInt(this.maxWidth / this.mapInfo.lineCount);
         var moveBy = { x: 0, y: 0 };
@@ -94,7 +98,24 @@ cc.Class({
         // 目标点是 [空白] 或者 [终点]
         if (arr == 0 || arr == 3) {
             // 人物移动
-            this.map.children[this.current.x + this.current.y * this.mapInfo.lineCount].PathChild('val').runAction(cc.moveBy(0.3, cc.v2(moveBy.x, moveBy.y)));
+            this.moving = true;
+            this.map.children[this.current.x + this.current.y * this.mapInfo.lineCount].PathChild('val').runAction(cc.sequence(cc.moveBy(0.3, cc.v2(moveBy.x, moveBy.y)), cc.callFunc(function () {
+                _this.moving = false;
+                switch (point) {
+                    case 0:
+                        // up
+                        break;
+                    case 1:
+                        // left
+                        break;
+                    case 2:
+                        // down
+                        break;
+                    case 3:
+                        // right
+                        break;
+                }
+            })));
         }
         // // 目标点是 [箱子]
         // if (arr == 2) {
