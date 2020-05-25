@@ -63,5 +63,26 @@ cc.Class({
                 sprite.spriteFrame = spriteFrame
             })
         }
+
+        window.GetPathByType = function (type) {
+            switch (type) {
+                case 0:
+                    return 'picture/pure/color_dark'
+                case 1:
+                    return 'picture/wall/wall_00'
+                case 2:
+                    return 'picture/box/box_00'
+                case 3:
+                    return 'picture/dot/dot_1'
+                case 4:
+                    return 'picture/box/box_01'
+                case 5:
+                    return 'picture/hero/down_00'
+                case 6:
+                    return 'picture/dot/dot_3'
+                default:
+                    cc.error('!--无法匹配的类型--!')
+            }
+        }
     },
 });

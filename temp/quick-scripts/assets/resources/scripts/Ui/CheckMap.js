@@ -43,7 +43,7 @@ cc.Class({
             // 渲染小地图
             for (var j = 0; j < data.map.length; j++) {
                 var smallItem = cc.instantiate(this.smallItem);
-                SetSpriteFrame(this.getPathByType(data.map[j]), smallItem.PathChild('val', cc.Sprite));
+                SetSpriteFrame(GetPathByType(data.map[j]), smallItem.PathChild('val', cc.Sprite));
                 smallItem.width = smallItemSize;
                 smallItem.height = smallItemSize;
                 smallItem.active = true;
@@ -55,25 +55,6 @@ cc.Class({
             item.parent = this.content;
         }
         this.content.y = 0;
-    },
-
-    getPathByType: function getPathByType(type) {
-        switch (type) {
-            case 0:
-                return 'picture/pure/color_dark';
-            case 1:
-                return 'picture/wall/wall_00';
-            case 2:
-                return 'picture/box/box_00';
-            case 3:
-                return 'picture/dot/dot_1';
-            case 4:
-                return 'picture/box/box_01';
-            case 5:
-                return 'picture/hero/down_00';
-            default:
-                cc.error('!--无法匹配的类型--!');
-        }
     },
 
     btnDelete: function btnDelete(event) {

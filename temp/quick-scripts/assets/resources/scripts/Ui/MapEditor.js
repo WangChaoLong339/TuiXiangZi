@@ -8,8 +8,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        top: cc.Node,
-
         mapRoot: cc.Node,
         mapItem: cc.Node,
 
@@ -36,35 +34,45 @@ cc.Class({
             maxMapWidth: ViewSize.width,
             maxMapHeight: ViewSize.height
         };
-
-        this.model.typeItemSize = parseInt(this.mapRoot.width / this.model.types.length);
-        this.model.typeItemSize = this.model.typeItemSize > 100 ? 100 : this.model.typeItemSize;
-        this.twinkle.width = this.twinkle.height = this.model.typeItemSize;
-
-        this.createTypeItem();
-    },
-
-    createTypeItem: function createTypeItem() {
-        this.typeRoot.removeAllChildren();
-        for (var i = 0; i < this.model.types.length; i++) {
-            var cloneItem = cc.instantiate(this.typeItem);
-            SetSpriteFrame('' + this.getPathByType(this.model.types[i]), cloneItem.PathChild('val', cc.Sprite));
-            cloneItem.width = this.model.typeItemSize;
-            cloneItem.height = this.model.typeItemSize;
-            cloneItem.x = -parseInt(this.model.types.length / 2) * cloneItem.width + i * cloneItem.width;
-            cloneItem.parent = this.typeRoot;
-        }
     },
 
     onenter: function onenter() {
-        this.clear();
+        this.initData();
+
+        // 清空map
+        this.mapRoot.removeAllChildren();
+        // 创建选择节点
+        this.createTypeItem();
+        // 设置选中框
+        this.twinkle.width = this.twinkle.height = this.model.typeItemSize;
         this.twinkle.x = this.typeRoot.children[0].x;
         this.playTwinkleAction();
+        // 清空输入框
+        this.bottom.PathChild('lineEditBox', cc.EditBox).string = '';
+        this.bottom.PathChild('columnEditBox', cc.EditBox).string = '';
     },
 
-    createMapItem: function createMapItem() {
-        this.mapRoot.removeAllChildren();
-        for (var i = 0; i < this.model.types; i++) {}
+    initData: function initData() {
+        this.model.typeIdx = 0;
+        this.model.lineCount = 0;
+        this.model.columnCount = 0;
+        this.model.mapData = [];
+    },
+
+    createTypeItem: function createTypeItem() {
+        var size = parseInt(this.mapRoot.width / this.model.types.length);
+        this.model.typeItemSize = size > 100 ? 100 : size;
+
+        this.typeRoot.removeAllChildren();
+        for (var i = 0; i < this.model.types.length; i++) {
+            var cloneItem = cc.instantiate(this.typeItem);
+            SetSpriteFrame('' + GetPathByType(this.model.types[i]), cloneItem.PathChild('val', cc.Sprite));
+            cloneItem.width = this.model.typeItemSize;
+            cloneItem.height = this.model.typeItemSize;
+            cloneItem.idx = i;
+            cloneItem.x = -parseInt(this.model.types.length / 2) * cloneItem.width + i * cloneItem.width;
+            cloneItem.parent = this.typeRoot;
+        }
     },
 
     playTwinkleAction: function playTwinkleAction() {
@@ -72,46 +80,37 @@ cc.Class({
         this.twinkle.runAction(cc.repeatForever(cc.sequence(cc.fadeOut(0.5), cc.fadeIn(0.5), cc.delayTime(0.2))));
     },
 
-    clear: function clear() {
-        // 数据层
-        this.model.typeIdx = 0;
-        this.model.lineCount = 0;
-        this.model.columnCount = 0;
-        this.model.mapData = [];
+    createMapItem: function createMapItem() {
+        var itemSize = null;
+        // 横图 || 方形图
+        if (this.model.lineCount >= this.model.columnCount) {
+            itemSize = parseInt(this.model.maxMapWidth / this.model.lineCount);
+            this.mapRoot.width = this.model.maxMapWidth;
+        }
+        // 竖图
+        if (this.model.lineCount < this.model.columnCount) {
+            itemSize = parseInt(this.model.maxMapWidth / this.model.columnCount);
+            this.mapRoot.width = this.model.lineCount * itemSize;
+        }
 
-        // 界面层
         this.mapRoot.removeAllChildren();
-        this.bottom.PathChild('lineEditBox', cc.EditBox).string = '';
-        this.bottom.PathChild('columnEditBox', cc.EditBox).string = '';
+        this.model.mapData = [];
+        for (var i = 0; i < this.model.lineCount * this.model.columnCount; i++) {
+            this.model.mapData.push(0);
+            var item = cc.instantiate(this.mapItem);
+            item.idx = i;
+            item.width = itemSize;
+            item.height = itemSize;
+            item.parent = this.mapRoot;
+        }
     },
 
     updateMap: function updateMap() {
         var _this = this;
 
         this.mapRoot.children.forEach(function (it, idx) {
-            SetSpriteFrame(_this.getPathByType(_this.model.mapData[idx]), it.PathChild('fg', cc.Sprite));
+            SetSpriteFrame(GetPathByType(_this.model.mapData[idx]), it.PathChild('fg', cc.Sprite));
         });
-    },
-
-    getPathByType: function getPathByType(type) {
-        switch (type) {
-            case 0:
-                return 'picture/pure/color_dark';
-            case 1:
-                return 'picture/wall/wall_00';
-            case 2:
-                return 'picture/box/box_00';
-            case 3:
-                return 'picture/dot/dot_1';
-            case 4:
-                return 'picture/box/box_01';
-            case 5:
-                return 'picture/hero/down_00';
-            case 6:
-                return 'picture/dot/dot_3';
-            default:
-                cc.error('!--无法匹配的类型--!');
-        }
     },
 
     trySaveMap: function trySaveMap(callback) {
@@ -153,9 +152,9 @@ cc.Class({
         });
     },
 
-    btnItemType: function btnItemType(event, data) {
-        this.twinkle.x = this.typeRoot.children[parseInt(data) + 1].x;
-        this.model.typeIdx = parseInt(data);
+    btnItemType: function btnItemType(event) {
+        this.model.typeIdx = event.target.idx;
+        this.twinkle.x = this.typeRoot.children[this.model.typeIdx].x;
     },
 
     btnMapItem: function btnMapItem(event) {
@@ -164,7 +163,7 @@ cc.Class({
         this.updateMap();
     },
 
-    btnComfirm: function btnComfirm() {
+    btnComfirmMapSize: function btnComfirmMapSize() {
         this.model.lineCount = parseInt(this.bottom.PathChild('lineEditBox', cc.EditBox).string) || 0;
         this.model.columnCount = parseInt(this.bottom.PathChild('columnEditBox', cc.EditBox).string) || 0;
         if (this.model.lineCount < 3 || this.model.lineCount > 15 || !this.model.columnCount || this.model.columnCount < 3 || this.model.columnCount > 15) {
@@ -175,29 +174,8 @@ cc.Class({
             });
             return;
         }
-        var itemSize = null;
-        // 横图 || 方形图
-        if (this.model.lineCount >= this.model.columnCount) {
-            itemSize = parseInt(this.model.maxMapWidth / this.model.lineCount);
-            this.mapRoot.width = this.model.maxMapWidth;
-        }
-        // 竖图
-        if (this.model.lineCount < this.model.columnCount) {
-            itemSize = parseInt(this.model.maxMapWidth / this.model.columnCount);
-            this.mapRoot.width = this.model.lineCount * itemSize;
-        }
 
-        this.mapRoot.removeAllChildren();
-        this.model.mapData = [];
-        for (var i = 0; i < this.model.lineCount * this.model.columnCount; i++) {
-            this.model.mapData.push(0);
-            var item = cc.instantiate(this.mapItem);
-            item.idx = i;
-            item.width = itemSize;
-            item.height = itemSize;
-            item.parent = this.mapRoot;
-        }
-        this.updateMap();
+        this.createMapItem();
     },
 
     btnGenerate: function btnGenerate() {
@@ -208,7 +186,8 @@ cc.Class({
             var i = localData.length > 0 ? localData[localData.length - 1].idx + 1 : 0;
             localData.push({ idx: i, lineCount: _this2.model.lineCount, columnCount: _this2.model.columnCount, map: _this2.model.mapData });
             SetLocalStorage('TuiXiangZi-info', localData);
-            _this2.clear();
+            // 重置界面
+            _this2.onenter();
         });
     },
 
