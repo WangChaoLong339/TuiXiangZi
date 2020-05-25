@@ -37,8 +37,10 @@ cc.Class({
     },
 
     close: function (name) {
-        if (this.model.prefabs[name]) {
-            this.closeAction(this.model.prefabs[name])
+        let pb = this.model.prefabs[name]
+        if (pb) {
+            pb.getComponent(name).onleave && pb.getComponent(name).onleave()
+            this.closeAction(pb)
         }
     },
 
