@@ -28,6 +28,10 @@ cc.Class({
         // 记录屏幕Size
         window.ViewSize = cc.winSize
 
+        window.Clone = function (obj) {
+            return JSON.parse(JSON.stringify(obj))
+        }
+
         window.GetCountFramArray = function (arr, elmt) {
             let count = 0
             for (let i = 0; i < arr.length; i++) {
