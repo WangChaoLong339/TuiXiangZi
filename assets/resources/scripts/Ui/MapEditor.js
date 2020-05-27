@@ -143,11 +143,7 @@ cc.Class({
         }
 
         callback()
-        UiMgr.showTips({
-            title: '提示',
-            msg: '保存地图成功',
-            btn: [{ name: '确认', func: UiMgr.hideTips },],
-        })
+        UiMgr.showTipsAutoHide('---!--创建新地图成功--!---')
     },
 
     btnItemType: function (event) {

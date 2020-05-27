@@ -19,9 +19,8 @@ cc.Class({
     },
 
     onenter: function (info) {
+        // 初始化数据
         this.initData(info)
-        // 隐藏胜利节点
-        this.win.active = false
         // 创建 地图 和 英雄
         this.create()
     },
@@ -41,6 +40,9 @@ cc.Class({
         this.model.itemSize = size
         this.model.point = 0 // 下 右 上 左
         this.model.heroIdx = null
+
+        // 隐藏胜利节点
+        this.win.active = false
     },
 
     create: function () {

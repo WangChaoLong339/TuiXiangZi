@@ -2496,7 +2496,7 @@
       }
     ],
     "_tag": -1,
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 97
@@ -3381,7 +3381,7 @@
       "__id__": 1
     },
     "_enabled": true,
-    "isAlignOnce": false,
+    "isAlignOnce": true,
     "_target": null,
     "_alignFlags": 45,
     "_left": 0,

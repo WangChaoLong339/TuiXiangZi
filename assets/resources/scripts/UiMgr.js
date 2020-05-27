@@ -71,22 +71,38 @@ cc.Class({
         }
     },
 
+    showTipsAutoHide: function (msg) {
+        if (this.model.prefabs.tipsAutoHide) {
+            this.model.prefabs.tipsAutoHide.active = true
+            this.model.prefabs.tipsAutoHide.getComponent('TipsAutoHide').onenter && this.model.prefabs.tipsAutoHide.getComponent('TipsAutoHide').onenter(msg)
+            return
+        }
+        cc.loader.loadRes(`tips/TipsAutoHide`, (err, prefab) => {
+            if (err) {
+                cc.error(err)
+                return
+            }
+            let pb = cc.instantiate(prefab)
+            pb.parent = this.tipsRoot
+            this.model.prefabs.tipsAutoHide = pb
+            pb.active = true
+            pb.getComponent('TipsAutoHide').onenter && pb.getComponent('TipsAutoHide').onenter(msg)
+        })
+    },
+
     openAction: function (node) {
-        node.scaleX = 0
-        node.scaleY = 0
+        node.opacity = 0
         node.active = true
         node.stopAllActions()
-        node.runAction(cc.scaleTo(0.3, 1, 1).easing(cc.easeCubicActionOut()))
+        node.runAction(cc.fadeIn(0.2).easing(cc.easeCubicActionOut()))
     },
 
     closeAction: function (node) {
         node.stopAllActions()
         node.runAction(cc.sequence(
-            cc.scaleTo(0.3, 0, 0).easing(cc.easeCubicActionOut()),
+            cc.fadeOut(0.2).easing(cc.easeCubicActionOut()),
             cc.callFunc(() => {
                 node.active = false
-                node.scaleX = 1
-                node.scaleY = 1
             }),
         ))
     },
