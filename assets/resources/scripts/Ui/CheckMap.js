@@ -52,6 +52,10 @@ cc.Class({
         this.content.x = 0
     },
 
+    btnItem: function (event) {
+        UiMgr.open('Game', this.allData[event.target.idx])
+    },
+
     btnDelete: function (event) {
         let idx = event.target.parent.idx
         this.allData.splice(idx, 1)

@@ -3,6 +3,7 @@ cc.Class({
 
     properties: {
         title: cc.Label,
+        count: cc.Label,
         map: cc.Node,
         item: cc.Node,
         hero: cc.Node,
@@ -28,6 +29,7 @@ cc.Class({
     initData: function (info) {
         this.model.info = Clone(info)
         this.model.map = info.map
+        this.model.count = 0
         this.model.lineCount = info.lineCount
         this.model.columnCount = info.columnCount
         // 动态算取 item 的尺寸
@@ -41,6 +43,9 @@ cc.Class({
         this.model.point = 0 // 下 右 上 左
         this.model.heroIdx = null
 
+        // 顶栏
+        this.title.string = `关卡:${info.idx + 1}`
+        this.count.string = `累计行走:${this.model.count}步`
         // 隐藏胜利节点
         this.win.active = false
     },
@@ -140,17 +145,20 @@ cc.Class({
                 }
                 break
         }
+        let canMove = false
         // 人物 -> 空地
         if (this.model.map[toIdx] == 0) {
             this.model.map[toIdx] = 5
             this.model.map[fromIdx] = this.model.map[fromIdx] == 5 ? 0 : 3
             this.model.heroIdx = toIdx
+            canMove = true
         }
         // 人物 -> 目标
         if (this.model.map[toIdx] == 3) {
             this.model.map[toIdx] = 6
             this.model.map[fromIdx] = this.model.map[fromIdx] == 5 ? 0 : 3
             this.model.heroIdx = toIdx
+            canMove = true
         }
         // 人物 -> 箱子 -> 空地
         if (this.model.map[toIdx] == 2 && this.model.map[thirdIdx] == 0) {
@@ -158,6 +166,7 @@ cc.Class({
             this.model.map[toIdx] = 5
             this.model.map[fromIdx] = this.model.map[fromIdx] == 5 ? 0 : 3
             this.model.heroIdx = toIdx
+            canMove = true
         }
         // 人物 -> 箱子 -> 目标
         if (this.model.map[toIdx] == 2 && this.model.map[thirdIdx] == 3) {
@@ -165,6 +174,7 @@ cc.Class({
             this.model.map[toIdx] = 5
             this.model.map[fromIdx] = this.model.map[fromIdx] == 5 ? 0 : 3
             this.model.heroIdx = toIdx
+            canMove = true
         }
         // 人物 -> 箱子+目标 -> 空地
         if (this.model.map[toIdx] == 4 && this.model.map[thirdIdx] == 0) {
@@ -172,6 +182,7 @@ cc.Class({
             this.model.map[toIdx] = 6
             this.model.map[fromIdx] = this.model.map[fromIdx] == 5 ? 0 : 3
             this.model.heroIdx = toIdx
+            canMove = true
         }
         // 人物 -> 箱子+目标 -> 目标
         if (this.model.map[toIdx] == 4 && this.model.map[thirdIdx] == 3) {
@@ -179,6 +190,11 @@ cc.Class({
             this.model.map[toIdx] = 6
             this.model.map[fromIdx] = this.model.map[fromIdx] == 5 ? 0 : 3
             this.model.heroIdx = toIdx
+            canMove = true
+        }
+        if (canMove) {
+            this.model.count++
+            this.count.string = `累计行走:${this.model.count}步`
         }
         this.updateMap()
         this.tryToEndTheGame()
